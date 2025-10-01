@@ -40,7 +40,7 @@ def readSpatialData(filepath):
         print(f"[readSpatialData] Errot:",{e})
     return gdf
 
-gdf=readSpatialData(FILE_PATH)
+#gdf=readSpatialData(FILE_PATH)
 
 #print(gdf.head())
 
@@ -121,4 +121,8 @@ def trans_From_Web_MTo_Geog_WGS84(inputfilepath,outputpath,EPSG=4326):
 #trans_From_Web_MTo_Geog_WGS84(inputfilepath=FILE_PATH,outputpath=OUTPUT_PATH,EPSG=4326)
 
 if __name__=="__main__":
+    #trans_From_Web_MTo_Geog_WGS84(inputfilepath=FILE_PATH,outputpath=OUTPUT_PATH,EPSG=4326)
+
+    Hospitals_gdf=readSpatialData(filepath=FILE_PATH)
+    PrintAttributeTable(Hospitals_gdf)
     trans_From_Web_MTo_Geog_WGS84(inputfilepath=FILE_PATH,outputpath=OUTPUT_PATH,EPSG=4326)
